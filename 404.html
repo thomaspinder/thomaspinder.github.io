@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Page not found</title>
+<script>
+  // Anything under /Impulso/ that has no stub (assets, _sources, unlisted pages)
+  // still lands on the same path on the new host. Case-insensitive on purpose.
+  var m = location.pathname.match(/^\/impulso(\/.*)?$/i);
+  if (m) {
+    location.replace("https://impulso.quantclimate.com" + (m[1] || "/") + location.search + location.hash);
+  }
+</script>
+</head>
+<body>
+<p>Page not found. The Impulso documentation now lives at
+<a href="https://impulso.quantclimate.com/">impulso.quantclimate.com</a>.</p>
+</body>
+</html>
